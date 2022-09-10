@@ -1,0 +1,23 @@
+/** Little Pet Shop of Horrors
+Here I created a database table of pets sold at a fictional pet store. Then I ordered the pets by price and aggregated the total number of pets in the shop inventory **/
+CREATE TABLE pet_shop (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
+
+INSERT INTO pet_shop VALUES (1, "Farting Ferrets", 5, 50, 1);
+INSERT INTO pet_shop VALUES (2, "Poisonous Hedgehogs", 25, 10, 1);
+INSERT INTO pet_shop VALUES (3, "Exploding Hampsters", 10,10,1);
+INSERT INTO pet_shop VALUES (4, "ID Theft Turtles", 15,15,1);
+INSERT INTO pet_shop VALUES (5,"Grifting Geckos", 20,20,1);
+INSERT INTO pet_shop VALUES (6, "Rampaging Rabbits", 20,20,2);
+INSERT INTO pet_shop VALUES (7,"Deadly Ducks", 25,25,2);
+INSERT INTO pet_shop VALUES (8,"Ferocious Fish", 30,30,2);
+INSERT INTO pet_shop VALUES (9, "Murderous Moles",35,35,2);
+INSERT INTO pet_shop VALUES (10,"Mad Cows", 35,35,3);
+INSERT INTO pet_shop VALUES (11, "Angry Birds", 40,40,3);
+INSERT INTO pet_shop VALUES (12, "Terrible Trout", 45,45,3);
+INSERT INTO pet_shop VALUES (13,"Gangrene Geese", 50,50,4);
+INSERT INTO pet_shop VALUES (14,"Paralyzing Pigs", 55,55,5);
+INSERT INTO pet_shop VALUES (15, "Perilous Parakeet", 60,60,6);
+
+/** ordering by price and showing total inventory of items**/
+SELECT * FROM pet_shop GROUP BY price;
+Select SUM(quantity) FROM pet_shop;
